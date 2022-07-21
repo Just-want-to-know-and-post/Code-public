@@ -1,0 +1,44 @@
+from processing import*
+import random
+
+circles = []
+score = 0
+frames= 0
+
+def setup():size(740,455)
+
+def draw():
+  global score
+  global frames
+  background(0, 0, 0)
+  fill(255, 255 ,255)
+  textSize(20)
+  text("Score" +str(score), 150, 30)
+  
+  frames+=1
+
+  if frames == 15:
+    circles.append([0, random.randint(30, 425)])
+    frames=0
+    
+  for clone in circles:
+    ellipse(clone[0], clone[1], 30, 30)
+    
+    
+    clone[0] += 2
+    
+    touch = dist(clone[0], clone[1], mouseX, mouseY,)
+    
+    if touch <= 25:
+      circles.remove(clone)
+      score+=1
+       
+    
+      
+    if score == 50:
+      text("You won" ,150, 100)
+      exit()
+        
+      
+    
+run()
