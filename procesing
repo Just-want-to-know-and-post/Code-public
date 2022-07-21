@@ -1,0 +1,37 @@
+from processing import*
+
+def setup():
+  global px, py
+  
+  py = 100
+  px = 100
+  
+  size (550,550)
+  
+def draw():
+  global px, py
+  
+  background(255,69,0)
+  
+  fill(0,0,0)
+  
+  ellipse(px,py, 100,100)
+  
+  if keyPressed:
+    if key == "w":
+      py -= 5
+      
+      
+  if keyPressed:
+    if key == "s":
+      py -= -5
+      
+  if keyPressed:
+    if key == "a":
+      px -= 5 
+  
+  if keyPressed:
+    if key == "d":
+      px -= -5
+      
+run()
