@@ -1,0 +1,36 @@
+from time import*
+import random as rdm
+
+questions = {"What is a computer " : ["A. A device that you use to find things easily ",
+"B. A comms devise that is small", "C. A machene that quickly drives you from one place to another ", "a"],
+"What was the enighma machene? ": ["A.  A Computer ", "B A 3d printer ", "C. cipher devigtce]","c"],
+"Rusiaa invaded what semi atonumus region": ["A. Moldova ", "B. Fiji", "C. Bling Blong Blang" ,"a"]}
+
+def main():
+  print("Welcome to my trivia")
+  sleep(1)
+  print("Note this is not a game. Just a fun quiz!!" "Use lowercase.")
+  correct=0
+  incorrect=0
+  
+  while len(questions) > 0:
+    question=rdm.choice(list(questions.keys()))
+    answer= input("Q: {}?\n\n".format(question)+ '\n'.join(questions[question][a] for a in range(3)))
+    
+    
+    if answer.lower() == questions[question][3].lower():
+      print("That's correct")
+      correct+=1
+      
+    else:
+      print("INCORRECT")
+      incorrect+=1
+        
+        
+    del questions[question]
+    
+    print("You got {}% of the questions correct!".format(int((correct /(correct+incorrect))*100)))
+    
+    #print question
+    #break
+main()
