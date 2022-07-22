@@ -1,0 +1,85 @@
+#importing librarys
+from turtle import*
+from random import*
+
+speed(1)
+tracer(30)
+
+Screen().bgcolor("black")
+
+
+x = -200
+y = 200
+size = 15
+angle = 90
+pensize(1)
+
+
+
+penup()
+goto(x,y)
+pendown()
+
+
+for j in range(36):
+  for i in range(36):
+    num = randint(1,5)
+    
+    if num == 1:
+      color("navy")
+      forward(size)
+      left(angle)
+
+    if num == 2:
+      color("lawn green")
+      backward(size)
+      
+    if num == 3:
+      color("gold")
+      right(angle)
+      forward(size)
+      
+    if num == 4:
+      color("brown")
+      left(angle)
+      forward(size)
+      
+    if num == 5:
+      color("floral white	")
+      left(angle)
+      forward(size)
+      
+    x = x + size
+    penup()
+    goto(x,y)
+    pendown()
+    
+  x = -200
+  y = y - size
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
