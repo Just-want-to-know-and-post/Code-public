@@ -1,0 +1,21 @@
+from random import*
+from turtle import*
+import time
+
+time.sleep(2)
+print ("Hello do you have a account or do you need to make a new one? If you are Zaid type Zaid twice when it says what is your username")
+
+
+Account = input()
+
+if Account == "I have an acount":
+  print ("what is your username?")
+    
+username = input()
+user = input()
+
+if username == "Zaid":
+  print "welcome back"
+  
+if user  == "Zaid":
+  print("You have 527 collecter points")
